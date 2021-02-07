@@ -10,11 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/kmisha/sidenav-component.git"
   },
-  "keywords": ["HTML", "CSS", "JavaScript"],
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
   "author": "Mikhail Kolesnikov <dadyaaya@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kmisha/sidenav-component/issues"
   },
-  "homepage": "https://github.com/kmisha/sidenav-component#readme"
+  "homepage": "https://github.com/kmisha/sidenav-component#readme",
+  "devDependencies": {
+    "rollup": "^2.38.5"
+  }
 }
