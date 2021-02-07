@@ -7,7 +7,7 @@
     "dev:js": "rollup -c -w",
     "dev:css": "postcss app/css/index.css -o app/bundle.css -w",
     "dev:server": "browser-sync app --files \"app/**/*, !app/css/**, !app/js/**\" --no-open --no-notify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently --kill-others npm:dev:*"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
     "browser-sync": "^2.26.14",
+    "concurrently": "^5.3.0",
     "cssnano": "^4.1.10",
     "postcss": "^8.2.5",
     "postcss-cli": "^8.3.1",
