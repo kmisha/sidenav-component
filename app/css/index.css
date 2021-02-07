@@ -1,3 +1,6 @@
+@import "sidenav.css";
+@import "brandnav.css";
+
 :root {
     --surface: lch(10 0 0);
     --surface2: lch(20 0 0);

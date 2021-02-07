@@ -11,7 +11,7 @@
     <script src="bundle.js" type="module" defer></script>
 </head>
 <body>
-<aside>
+<aside id="sidenav-open">
     <nav>
         <h4>My</h4>
         <a href="#">Dashboard</a>
@@ -25,12 +25,12 @@
         <a href="#">Admin</a>
     </nav>
 
-    <a href="#" title="Close Menu" aria-label="Close Menu"></a>
+    <a href="#" id="sidenav-close" title="Close Menu" aria-label="Close Menu"></a>
 </aside>
 <main>
     <header>
         <a href="#sidenav-open" class="hamburger" title="Open Menu"
-           aria-label="Open Menu">
+           aria-label="Open Menu" id="sidenav-button">
             <svg viewBox="0 0 50 40" role="presentation" focusable="false"
                  aria-label="trigram for heaven symbol">
                 <line x1="0" x2="100%" y1="10%" y2="10%" />
