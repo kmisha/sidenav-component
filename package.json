@@ -4,6 +4,7 @@
   "description": "A responsive slide out side navigation component",
   "main": "index.js",
   "scripts": {
+    "dev:js": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
