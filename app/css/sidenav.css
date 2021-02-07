@@ -1,0 +1,54 @@
+body {
+    display: grid;
+    grid: [stack] 1fr / min-content [stack] 1fr;
+
+    @media (max-width: 540px) {
+        & > :matches(aside, main) {
+            grid-area: stack;
+        }
+    }
+}
+
+#sidenav-open {
+    display: grid;
+    grid-template-columns: [nav] 2fr [escape] 1fr;
+    --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration: .6s;
+
+    @media (max-width: 540px) {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow: hidden auto;
+        overscroll-behavior: contain;
+        transform: translateX(-110vw);
+        will-change: transform;
+        transition:
+                transform var(--duration) var(--easeOutExpo),
+                visibility 0s linear var(--duration);
+
+        &:target {
+            visibility: visible;
+            transform: translateX(0);
+            transition: transform var(--duration) var(--easeOutExpo);
+        }
+
+        visibility: hidden; /* not keyboard accessible when closed */
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        --duration: 1ms;
+    }
+}
+
+#sidenav-button,
+#sidenav-close {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    touch-action: manipulation;
+
+    @media (min-width: 540px) {
+        display: none;
+    }
+}
