@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:js": "rollup -c -w",
+    "dev:css": "postcss app/css/index.css -o app/bundle.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +27,14 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
-    "rollup": "^2.38.5"
+    "postcss": "^8.2.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-easings": "^3.0.1",
+    "postcss-import": "^14.0.0",
+    "postcss-import-url": "^6.0.0",
+    "postcss-loader": "^5.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "rollup": "^2.38.5",
+    "rollup-plugin-postcss": "^4.0.0"
   }
 }
