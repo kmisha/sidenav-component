@@ -1,0 +1,1 @@
+var e=document.querySelector("#sidenav-open"),n=document.querySelector("#sidenav-close"),o=document.querySelector("#sidenav-button");e.addEventListener("keyup",(function(e){"Escape"===e.code&&(document.location.hash="")})),e.addEventListener("transitionend",(function(e){"transform"===e.propertyName&&("#sidenav-open"===document.location.hash?n.focus():o.focus())}));
